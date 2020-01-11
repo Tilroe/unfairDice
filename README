@@ -1,0 +1,14 @@
+# =======================================
+# Name: Rowan Tilroe
+# ID: 1629172
+# CMPUT 274, Fall 2019
+#
+# Weekly exercise #2: Unfair Dice
+# =======================================
+
+Running instructions:
+	The program requires you to run it each time in order to use it. To change the result, simply edit the parameters manually in the main program at the bottom of the file.
+
+Notes and Assumptions:
+	- The biased rolls function assumes that all the numbers within the list add up to 1
+	- My approach towards generating a biased number for each roll was to view the probability list as a sort of map in the shape of a bar of length 1 divided into as many sections as there are sides to the dice (# of elements in the prob_list list) The "zones" on the map were found in the same order and size as the elements in the probability list. Generating a random number in the range of [0,1] not inclunding 1 was seen as marking a location on the map, and the algorithm in the function is meant to check each successive "zone" to see if the random value's location was no longer greater than the last "zone" checked
